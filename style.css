@@ -36,7 +36,7 @@ body{
 a{
   color: var(--text);
   text-decoration: none;
-  transition: color .2s ease, background-color .2s ease, border-color .2s ease, opacity .2s ease, transform .2s ease, box-shadow .2s ease;
+  transition: color .2s ease, background-color .2s ease, border-color .2s ease, transform .2s ease, box-shadow .2s ease;
 }
 a:hover{ color: var(--accent-strong); }
 
@@ -61,7 +61,7 @@ a:hover{ color: var(--accent-strong); }
   max-width: 60ch;
 }
 
-/* ===== Header ===== */
+/* ===== Header (prominent & clean) ===== */
 .topbar{
   position: sticky;
   top: 0;
@@ -113,7 +113,7 @@ a:hover{ color: var(--accent-strong); }
   padding: 6px 0;
 }
 
-/* Hover underline */
+/* Hover underline (nur normale Links) */
 .nav a:not(.btn):hover{ color: var(--accent-strong); }
 
 .nav a:not(.btn)::after{
@@ -128,22 +128,25 @@ a:hover{ color: var(--accent-strong); }
 }
 .nav a:not(.btn):hover::after{ width:100%; }
 
-/* Kontakt-Button: NICHT bubble -> cleaner "text button" */
+/* Kontakt im Header: KEINE Bubble mehr (nur subtiler Hover) */
 .nav .btn{
-  border-radius: 12px;                /* weniger pillig */
-  padding: 9px 12px;
-  background: transparent;            /* keine Bubble */
-  border: 1px solid rgba(230,227,223,.9);
-  box-shadow: none;
-  color: var(--text);
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 8px 12px !important;
+  border-radius: 12px !important;   /* leicht gerundet, nicht pill */
+  color: var(--text) !important;
+  font-weight: 700 !important;
 }
 
 .nav .btn:hover{
-  background: var(--accent-bg);
-  border-color: rgba(231,166,199,.6);
+  background: var(--accent-bg) !important;
+  color: var(--accent-strong) !important;
   transform: translateY(-1px);
-  box-shadow: 0 10px 18px rgba(231,166,199,.14);
 }
+
+/* falls irgendwo ein underline pseudo-element greifen würde */
+.nav .btn::after{ display:none !important; }
 /* ===== /Header ===== */
 
 .grid{ display:grid; gap: 16px; }
@@ -202,7 +205,7 @@ a:hover{ color: var(--accent-strong); }
   max-width: 56ch;
 }
 
-/* Buttons */
+/* Buttons allgemein */
 .actions{
   display:flex;
   gap: 10px;
