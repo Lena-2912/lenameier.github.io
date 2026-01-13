@@ -398,3 +398,36 @@ p{ margin: 0; }
   .meta{ grid-template-columns: 1fr; }
   .stats{ grid-template-columns: 1fr; }
 }
+
+/* Skills Pills wie im Screenshot */
+.subhead{
+  margin: 18px 0 14px;
+  font-size: 22px;
+  letter-spacing: -0.02em;
+}
+
+.pillwrap{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.pillchip{
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,.75);
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1;
+  transition: background-color .2s ease, border-color .2s ease, color .2s ease, transform .2s ease;
+}
+
+.pillchip:hover{
+  background: var(--accent-bg);
+  border-color: var(--accent);
+  color: #222;
+  transform: translateY(-1px);
+}
