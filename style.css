@@ -1,3 +1,5 @@
+/* style.css */
+
 :root{
   --bg: #faf9f7;              /* warmes Off-White */
   --panel: #ffffff;
@@ -8,9 +10,9 @@
   --muted: #6f6f6f;
 
   --accent: #e7a6c7;          /* softes Rosa */
-  --accent-strong: #d88bb4;   /* für Hover */
+  --accent-strong: #d88bb4;   /* Hover */
   --accent-bg: #faedf3;       /* sehr leichtes Rosa */
-  --soft: rgba(231,166,199,.45); /* fehlte vorher -> für underline/accents */
+  --soft: rgba(231,166,199,.45);
 
   --radius: 18px;
   --max: 1120px;
@@ -30,15 +32,13 @@ body{
   line-height: 1.55;
 }
 
-/* Links: rosa Hover sichtbar (ohne Opacity-Trick) */
+/* Links */
 a{
   color: var(--text);
   text-decoration: none;
-  transition: color .2s ease, background-color .2s ease, border-color .2s ease, opacity .2s ease;
+  transition: color .2s ease, background-color .2s ease, border-color .2s ease, opacity .2s ease, transform .2s ease, box-shadow .2s ease;
 }
-a:hover{
-  color: var(--accent-strong);
-}
+a:hover{ color: var(--accent-strong); }
 
 /* Layout */
 .container{
@@ -49,9 +49,7 @@ a:hover{
 .section{ padding: 84px 0; }
 .hero{ padding: 110px 0 84px; }
 
-.section__head{
-  margin-bottom: 22px;
-}
+.section__head{ margin-bottom: 22px; }
 .section__head h2{
   margin: 0 0 6px;
   font-size: 26px;
@@ -60,26 +58,28 @@ a:hover{
 .section__head p{
   margin: 0;
   color: var(--muted);
+  max-width: 60ch;
 }
 
-/* Topbar: light + clean */
+/* ===== Header: prominenter & clean ===== */
 .topbar{
   position: sticky;
   top: 0;
   z-index: 50;
-  backdrop-filter: blur(14px);
-  background: rgba(250,249,247,.88);
+  backdrop-filter: blur(16px);
+  background: rgba(250,249,247,.92);
   border-bottom: 1px solid var(--border);
+  box-shadow: 0 10px 28px rgba(0,0,0,.06);
 }
 
 .topbar__inner{
   display:flex;
   align-items:center;
   justify-content:space-between;
-  padding: 18px 0; /* mehr Höhe = mehr Präsenz */
+  padding: 20px 0;
 }
 
-/* Logo / Titel links */
+/* Brand links */
 .brand{
   font-weight: 800;
   font-size: 18px;
@@ -87,44 +87,43 @@ a:hover{
   position: relative;
 }
 
-/* feine rosa Linie unter "Profil" */
+/* Akzentlinie unter "Profil" */
 .brand::after{
   content:"";
   position:absolute;
   left:0;
-  bottom:-6px;
-  width:28px;
-  height:2px;
+  bottom:-8px;
+  width:34px;
+  height:3px;
   background: var(--accent);
-  border-radius: 2px;
+  border-radius: 3px;
 }
 
-/* Navigation */
+/* Nav */
 .nav{
   display:flex;
-  gap: 22px; /* mehr Luft */
+  gap: 22px;
   align-items:center;
 }
 
 .nav a{
   color: var(--muted);
   font-size: 15px;
-  font-weight: 500;
+  font-weight: 600;
   position: relative;
-  padding: 4px 0;
+  padding: 6px 0;
 }
 
-/* dezenter Hover */
-.nav a:hover{
-  color: var(--text);
+/* Hover: rosa + Unterstreichung */
+.nav a:not(.btn):hover{
+  color: var(--accent-strong);
 }
 
-/* feine Hover-Linie unter Nav-Punkten */
 .nav a:not(.btn)::after{
   content:"";
   position:absolute;
   left:0;
-  bottom:-6px;
+  bottom:-9px;
   width:0;
   height:2px;
   background: var(--accent);
@@ -135,11 +134,17 @@ a:hover{
   width:100%;
 }
 
-
-/* Nav Hover rosa */
-.nav a:hover{
-  color: var(--accent-strong);
+/* Kontakt Button im Header prominenter */
+.nav .btn{
+  padding: 10px 16px;
+  font-weight: 700;
+  border-color: rgba(231,166,199,.35);
 }
+
+.nav .btn:hover{
+  border-color: rgba(231,166,199,.75);
+}
+/* ===== /Header ===== */
 
 .grid{ display:grid; gap: 16px; }
 .hero__grid{ grid-template-columns: 1.15fr .85fr; align-items: start; }
@@ -155,13 +160,11 @@ a:hover{
   box-shadow: 0 12px 30px rgba(0,0,0,.06);
   transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
 }
-
 .card:hover{
   transform: translateY(-4px);
   border-color: rgba(231,166,199,.55);
   box-shadow: 0 18px 40px rgba(231,166,199,.22);
 }
-
 .card--big{ padding: 24px; }
 
 /* Badge */
@@ -220,7 +223,6 @@ a:hover{
   font-size:14px;
   transition: transform .2s ease, background-color .2s ease, border-color .2s ease, box-shadow .2s ease, color .2s ease;
 }
-
 .btn:hover{
   background: var(--accent-bg);
   border-color: rgba(231,166,199,.75);
@@ -228,10 +230,7 @@ a:hover{
   transform: translateY(-1px);
   color: #000;
 }
-
-.btn--ghost{
-  background: transparent;
-}
+.btn--ghost{ background: transparent; }
 
 /* Meta */
 .meta{
@@ -239,21 +238,18 @@ a:hover{
   grid-template-columns: repeat(3, 1fr);
   gap: 12px;
 }
-
 .meta__item{
   padding: 12px;
   border-radius: 14px;
   border: 1px solid var(--border);
   background: rgba(255,255,255,.65);
 }
-
 .meta__label{
   display:block;
   color: var(--muted);
   font-size: 12px;
   margin-bottom: 2px;
 }
-
 .meta__value{
   font-size: 14px;
   font-weight: 700;
@@ -264,10 +260,9 @@ a:hover{
 .card__title{ margin:0; font-size: 18px; letter-spacing: -0.02em; }
 .card__sub{ margin:4px 0 0; color: var(--muted); font-size: 13px; }
 
-/* Mini stack (falls du’s nutzt) */
+/* Mini stack */
 .stack{ display:grid; gap: 12px; margin-top: 14px; }
 .mini{ display:flex; gap: 12px; align-items:flex-start; }
-
 .mini__dot{
   width: 10px; height: 10px;
   border-radius: 999px;
@@ -275,7 +270,6 @@ a:hover{
   background: rgba(231,166,199,.35);
   margin-top: 6px;
 }
-
 .mini__title{ margin:0; font-weight: 700; }
 .mini__text{ margin:4px 0 0; color: var(--muted); font-size: 13px; }
 
@@ -292,21 +286,18 @@ a:hover{
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
 }
-
 .stat{
   padding: 12px;
   border-radius: 14px;
   border: 1px solid var(--border);
   background: rgba(255,255,255,.65);
 }
-
 .stat__num{
   margin:0;
   font-size: 18px;
   font-weight: 800;
   letter-spacing: -0.02em;
 }
-
 .stat__label{
   margin: 4px 0 0;
   color: var(--muted);
@@ -320,13 +311,11 @@ p{ margin: 0; }
 
 /* Timeline */
 .timeline{ display:grid; gap: 16px; }
-
 .tl{
   display:grid;
   grid-template-columns: 16px 1fr;
   gap: 14px;
 }
-
 .tl__dot{
   width: 12px; height: 12px;
   border-radius: 999px;
@@ -334,7 +323,6 @@ p{ margin: 0; }
   border: 1px solid rgba(231,166,199,.55);
   margin-top: 6px;
 }
-
 .tl__top{
   display:flex;
   gap: 10px;
@@ -342,7 +330,6 @@ p{ margin: 0; }
   justify-content: space-between;
   flex-wrap: wrap;
 }
-
 .pill{
   font-size: 12px;
   color: var(--muted);
@@ -352,9 +339,8 @@ p{ margin: 0; }
   background: rgba(255,255,255,.65);
 }
 
-/* Project tags (falls du Projects nutzt) */
+/* Project tags */
 .project .tags{ margin-top: 12px; display:flex; gap: 8px; flex-wrap: wrap; }
-
 .tag{
   font-size: 12px;
   color: var(--muted);
@@ -364,28 +350,7 @@ p{ margin: 0; }
   background: rgba(255,255,255,.65);
 }
 
-/* Skills chips */
-.chips{ display:flex; flex-wrap: wrap; gap: 10px; }
-
-.chip{
-  padding: 10px 12px;
-  border-radius: 999px;
-  border: 1px solid var(--border);
-  background: rgba(255,255,255,.85);
-  color: var(--text);
-  font-size: 13px;
-  transition: background-color .2s ease, border-color .2s ease, transform .2s ease, box-shadow .2s ease, color .2s ease;
-}
-
-.chip:hover{
-  background: var(--accent-bg);
-  border-color: rgba(231,166,199,.75);
-  box-shadow: 0 10px 18px rgba(231,166,199,.18);
-  transform: translateY(-1px);
-  color: #000;
-}
-
-/* Links list (Kontakt) */
+/* Contact links */
 .links{
   list-style: none;
   padding: 0;
@@ -393,7 +358,6 @@ p{ margin: 0; }
   display:grid;
   gap: 10px;
 }
-
 .links a{
   display:flex;
   justify-content: space-between;
@@ -405,7 +369,6 @@ p{ margin: 0; }
   color: var(--text);
   transition: background-color .2s ease, border-color .2s ease, transform .2s ease, box-shadow .2s ease, color .2s ease;
 }
-
 .links a:hover{
   background: var(--accent-bg);
   border-color: rgba(231,166,199,.75);
@@ -423,25 +386,7 @@ p{ margin: 0; }
   text-align:center;
 }
 
-/* Responsive */
-@media (max-width: 980px){
-  .hero__grid{ grid-template-columns: 1fr; }
-  .three{ grid-template-columns: 1fr; }
-  .two{ grid-template-columns: 1fr; }
-  .headline{ font-size: 44px; }
-}
-
-@media (max-width: 640px){
-  .nav{ display:none; } /* super clean auf mobile */
-  .section{ padding: 70px 0; }
-  .hero{ padding: 88px 0 70px; }
-  .headline{ font-size: 38px; }
-  .meta{ grid-template-columns: 1fr; }
-  .stats{ grid-template-columns: 1fr; }
-}
-
 /* ===== Skills Pills (Screenshot-Stil) ===== */
-
 .subhead{
   margin: 22px 0 14px;
   font-size: 22px;
@@ -456,7 +401,6 @@ p{ margin: 0; }
   gap: 12px;
 }
 
-/* einzelne Skill-Pills */
 .pillchip{
   display: inline-flex;
   align-items: center;
@@ -464,7 +408,7 @@ p{ margin: 0; }
   border-radius: 999px;
   border: 1px solid var(--border);
   background: #ffffff;
-  color: #4b5563; /* leichtes Grau wie im Screenshot */
+  color: #4b5563;
   font-size: 14px;
   line-height: 1;
   white-space: nowrap;
@@ -476,7 +420,6 @@ p{ margin: 0; }
     box-shadow .25s ease;
 }
 
-/* Hover-Effekt (helles Rosa, sehr subtil) */
 .pillchip:hover{
   background: var(--accent-bg);
   border-color: var(--accent);
@@ -485,38 +428,20 @@ p{ margin: 0; }
   box-shadow: 0 6px 16px rgba(231,166,199,.25);
 }
 
-/* Mobile etwas kompakter */
+/* Responsive */
+@media (max-width: 980px){
+  .hero__grid{ grid-template-columns: 1fr; }
+  .three{ grid-template-columns: 1fr; }
+  .two{ grid-template-columns: 1fr; }
+  .headline{ font-size: 44px; }
+}
+
 @media (max-width: 640px){
-  .pillchip{
-    font-size: 13px;
-    padding: 9px 14px;
-  }
-}
-
-/* FORCE: Skills Pills */
-.pillwrap{
-  display:flex !important;
-  flex-wrap:wrap !important;
-  gap:12px !important;
-}
-
-.pillchip{
-  display:inline-flex !important;
-  align-items:center !important;
-  padding:10px 16px !important;
-  border-radius:999px !important;
-  border:1px solid var(--border) !important;
-  background:#fff !important;
-  color:#4b5563 !important;
-  font-size:14px !important;
-  line-height:1 !important;
-  white-space:nowrap !important;
-}
-
-.pillchip:hover{
-  background: var(--accent-bg) !important;
-  border-color: var(--accent) !important;
-  color:#111 !important;
-  box-shadow: 0 6px 16px rgba(231,166,199,.25) !important;
-  transform: translateY(-1px) !important;
+  .nav{ display:none; }
+  .section{ padding: 70px 0; }
+  .hero{ padding: 88px 0 70px; }
+  .headline{ font-size: 38px; }
+  .meta{ grid-template-columns: 1fr; }
+  .stats{ grid-template-columns: 1fr; }
+  .pillchip{ font-size: 13px; padding: 9px 14px; }
 }
