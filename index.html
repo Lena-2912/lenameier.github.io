@@ -1,48 +1,315 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <title>Lena Meier</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    body {
-      font-family: system-ui, Arial, sans-serif;
-      background: #f5f5f5;
-      margin: 0;
-      padding: 40px;
-    }
-    .card {
-      max-width: 700px;
-      margin: auto;
-      background: white;
-      padding: 32px;
-      border-radius: 16px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-    }
-    h1 { margin-top: 0; }
-  </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Profil</title>
+  <meta name="description" content="CV / Portfolio – Lena" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-  <div class="card">
-    <h1>Hi, ich bin Lena 👋</h1>
-    <p>
-      Ich bin Mediamatikerin in Ausbildung und interessiere mich für
-      Branding, Marketing, Design und digitale Projekte.
-    </p>
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <a class="brand" href="#top">Profil</a>
 
-    <h2>Skills</h2>
-    <ul>
-      <li>Figma & Adobe</li>
-      <li>HTML / CSS Basics</li>
-      <li>Content & Projektarbeit</li>
-    </ul>
+      <nav class="nav">
+        <a href="#about">Über mich</a>
+        <a href="#experience">Erfahrung</a>
+        <a href="#projects">Projekte</a>
+        <a href="#skills">Skills</a>
+        <a class="btn btn--small" href="#contact">Kontakt</a>
+      </nav>
+    </div>
+  </header>
 
-    <h2>Kontakt</h2>
-    <p>
-      📧 Mail: deine.mail@example.com<br>
-      🔗 LinkedIn / GitHub
-    </p>
-  </div>
+  <main id="top">
+    <!-- HERO -->
+    <section class="section hero">
+      <div class="container grid hero__grid">
+        <div class="hero__left">
+          <p class="badge">Mediamatik • Branding • Marketing</p>
+          <h1 class="headline">
+            Hi, ich bin <span class="accent">Lena</span>.
+          </h1>
+          <p class="lead">
+            Mediamatikerin in Ausbildung. Ich baue klare Marken, saubere Designs
+            und digitale Inhalte — strukturiert, zuverlässig, professionell.
+          </p>
+
+          <div class="actions">
+            <a class="btn" href="#projects">Projekte ansehen</a>
+            <a class="btn btn--ghost" href="#contact">Kontakt</a>
+          </div>
+
+          <div class="meta">
+            <div class="meta__item">
+              <span class="meta__label">Standort</span>
+              <span class="meta__value">Zürich (CH)</span>
+            </div>
+            <div class="meta__item">
+              <span class="meta__label">Fokus</span>
+              <span class="meta__value">Branding, Content, Web</span>
+            </div>
+            <div class="meta__item">
+              <span class="meta__label">Verfügbar</span>
+              <span class="meta__value">ab 2026</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__right">
+          <div class="card card--big">
+            <div class="card__head">
+              <h2 class="card__title">Kurzprofil</h2>
+              <p class="card__sub">3 Highlights auf einen Blick</p>
+            </div>
+
+            <div class="stack">
+              <div class="mini">
+                <span class="mini__dot"></span>
+                <div>
+                  <p class="mini__title">Saubere Gestaltung</p>
+                  <p class="mini__text">Minimal, modern, mit klarer Typografie & Grid.</p>
+                </div>
+              </div>
+
+              <div class="mini">
+                <span class="mini__dot"></span>
+                <div>
+                  <p class="mini__title">Strukturiertes Arbeiten</p>
+                  <p class="mini__text">Planung, Dokumentation, saubere Abgabe.</p>
+                </div>
+              </div>
+
+              <div class="mini">
+                <span class="mini__dot"></span>
+                <div>
+                  <p class="mini__title">Digitaler Fokus</p>
+                  <p class="mini__text">Content, Web, Präsentationen, Social Media.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="stats">
+              <div class="stat">
+                <p class="stat__num">3+</p>
+                <p class="stat__label">Jahre Ausbildung</p>
+              </div>
+              <div class="stat">
+                <p class="stat__num">10+</p>
+                <p class="stat__label">Projekte</p>
+              </div>
+              <div class="stat">
+                <p class="stat__num">100%</p>
+                <p class="stat__label">Detailfokus</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Optional: Foto -->
+          <!-- <img class="portrait" src="portrait.jpg" alt="Portrait" /> -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2>Über mich</h2>
+          <p>Kurzer Text für Bewerbungen — klar, seriös, ohne Blabla.</p>
+        </div>
+
+        <div class="grid two">
+          <div class="card">
+            <h3>Was ich mache</h3>
+            <p>
+              Ich plane und gestalte digitale Inhalte — von Branding & Layout über
+              Content bis zu einfachen Websites. Ich arbeite gerne strukturiert,
+              sauber dokumentiert und mit einem klaren Qualitätsanspruch.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Was ich suche</h3>
+            <p>
+              Einstiegsstelle / Praktikum im Bereich Marketing, Branding, Content,
+              Kommunikation oder Digital. Idealerweise hybrid und mit Lernkurve.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2>Erfahrung</h2>
+          <p>Als Timeline — wirkt „CV-mässig“ und bleibt clean.</p>
+        </div>
+
+        <div class="card">
+          <div class="timeline">
+            <div class="tl">
+              <div class="tl__dot"></div>
+              <div class="tl__content">
+                <div class="tl__top">
+                  <h3>Mediamatikerin EFZ (in Ausbildung)</h3>
+                  <span class="pill">2023 – 2026</span>
+                </div>
+                <p class="muted">
+                  Content, Gestaltung, Projektarbeit, Web/Branding-Tasks, Kommunikation.
+                </p>
+              </div>
+            </div>
+
+            <div class="tl">
+              <div class="tl__dot"></div>
+              <div class="tl__content">
+                <div class="tl__top">
+                  <h3>Schul-/Projektarbeiten (BMS/IPA/VA)</h3>
+                  <span class="pill">laufend</span>
+                </div>
+                <p class="muted">
+                  Dokumentation, Analyse, Präsentationen, strukturierte Projektplanung.
+                </p>
+              </div>
+            </div>
+
+            <div class="tl">
+              <div class="tl__dot"></div>
+              <div class="tl__content">
+                <div class="tl__top">
+                  <h3>Extras</h3>
+                  <span class="pill">Events • Team</span>
+                </div>
+                <p class="muted">
+                  Organisation, Verantwortung, Zusammenarbeit, Kommunikation.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2>Projekte</h2>
+          <p>3–6 Cards reichen. Lieber „weniger, aber stark“.</p>
+        </div>
+
+        <div class="grid three">
+          <article class="card project">
+            <div class="project__top">
+              <h3>Portfolio Website</h3>
+              <span class="pill">Web</span>
+            </div>
+            <p class="muted">
+              One-Pager mit sauberem Layout, responsive, GitHub Pages.
+            </p>
+            <div class="tags">
+              <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">UX</span>
+            </div>
+          </article>
+
+          <article class="card project">
+            <div class="project__top">
+              <h3>Branding Konzept</h3>
+              <span class="pill">Design</span>
+            </div>
+            <p class="muted">
+              Logo, Farben, Typo, Packaging-Ideen & Content-Guidelines.
+            </p>
+            <div class="tags">
+              <span class="tag">Figma</span><span class="tag">Brand</span><span class="tag">Layout</span>
+            </div>
+          </article>
+
+          <article class="card project">
+            <div class="project__top">
+              <h3>Präsentations-Set</h3>
+              <span class="pill">Content</span>
+            </div>
+            <p class="muted">
+              Slides im cleanen Grid, klare Hierarchie, Quellen & Storyline.
+            </p>
+            <div class="tags">
+              <span class="tag">Story</span><span class="tag">Design</span><span class="tag">Clarity</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2>Skills</h2>
+          <p>Als Tags wirkt modern & bleibt minimal.</p>
+        </div>
+
+        <div class="card">
+          <div class="chips">
+            <span class="chip">Branding</span>
+            <span class="chip">Content</span>
+            <span class="chip">Figma</span>
+            <span class="chip">Adobe</span>
+            <span class="chip">HTML/CSS</span>
+            <span class="chip">Social Media</span>
+            <span class="chip">Projektmanagement</span>
+            <span class="chip">Präsentationen</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2>Kontakt</h2>
+          <p>Mach’s kurz: Mail + LinkedIn + GitHub.</p>
+        </div>
+
+        <div class="grid two">
+          <div class="card">
+            <h3>Schreib mir</h3>
+            <p class="muted">Am besten per E-Mail:</p>
+            <p class="big">
+              <a href="mailto:deine.mail@example.com">deine.mail@example.com</a>
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Links</h3>
+            <ul class="links">
+              <li><a href="https://github.com/lena-2912" target="_blank" rel="noreferrer">GitHub</a></li>
+              <li><a href="#" target="_blank" rel="noreferrer">LinkedIn</a></li>
+              <li><a href="#" target="_blank" rel="noreferrer">CV (PDF)</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <footer class="footer">
+          <p>© <span id="year"></span> Lena • Built on GitHub Pages</p>
+        </footer>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
-
