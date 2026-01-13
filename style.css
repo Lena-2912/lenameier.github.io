@@ -1,3 +1,4 @@
+/* style.css */
 :root{
   --bg:#faf9f7;
   --panel:#ffffff;
@@ -122,15 +123,11 @@ a:hover{ color: var(--accent-strong); }
   background:rgba(231,166,199,.55);
   transition: background-color .2s ease;
 }
-.nav__cta:hover::after{
-  background: var(--accent);
-}
+.nav__cta:hover::after{ background: var(--accent); }
 /* ===== /Header ===== */
 
 /* ===== Hero wie Screenshot ===== */
-.hero{
-  padding:42px 0 14px;
-}
+.hero{ padding:42px 0 14px; }
 
 .hero__grid{
   display:grid;
@@ -197,9 +194,7 @@ a:hover{ color: var(--accent-strong); }
   transform: translateY(-1px);
 }
 
-.btn--ghost{
-  background: transparent;
-}
+.btn--ghost{ background: transparent; }
 .btn--ghost:hover{
   background: var(--accent-bg);
   border-color: rgba(231,166,199,.75);
@@ -337,31 +332,7 @@ h3{ margin:0 0 10px; letter-spacing:-0.02em; }
 p{ margin:0; }
 .muted{ color: var(--muted); }
 
-.timeline{ display:grid; gap:16px; }
-.tl{ display:grid; grid-template-columns:16px 1fr; gap:14px; }
-.tl__dot{
-  width:12px; height:12px;
-  border-radius:999px;
-  background: rgba(231,166,199,.35);
-  border:1px solid rgba(231,166,199,.55);
-  margin-top:6px;
-}
-.tl__top{
-  display:flex;
-  gap:10px;
-  align-items:center;
-  justify-content:space-between;
-  flex-wrap:wrap;
-}
-.pill{
-  font-size:12px;
-  color:var(--muted);
-  padding:6px 10px;
-  border:1px solid var(--border);
-  border-radius:999px;
-  background: rgba(255,255,255,.65);
-}
-
+/* Project tags wrapper */
 .project .tags{ margin-top:12px; display:flex; gap:8px; flex-wrap:wrap; }
 
 /* Links */
@@ -434,49 +405,34 @@ p{ margin:0; }
   box-shadow: 0 6px 16px rgba(231,166,199,.25);
 }
 
-/* Responsive */
-@media (max-width: 980px){
-  .hero__grid{ grid-template-columns:1fr; }
-  .hero__right{ justify-content:flex-start; margin-top:14px; }
-  .hero__title{ font-size:46px; }
-  .hero__bottom{ grid-template-columns:1fr; }
-  .three, .two{ grid-template-columns:1fr; }
-}
-
-@media (max-width: 640px){
-  .nav{ display:none; }
-  .hero{ padding-top:26px; }
-  .hero__title{ font-size:38px; }
-  .avatar{ width:180px; height:180px; }
-}
-
 /* ===== Experience Timeline (Screenshot-Stil) ===== */
+/* Wichtig: das ist dein NEUER Experience Block (mit <div class="exp">...) */
 .exp{
   margin-top: 10px;
   display: grid;
-  gap: 18px;
+  gap: 22px;
 }
 
 .exp__item{
   position: relative;
-  padding-left: 34px;           /* Platz für Linie + Dot */
+  padding-left: 44px;         /* Platz für Linie + Dot */
   padding-top: 2px;
 }
 
 .exp__item::before{
   content:"";
   position:absolute;
-  left: 14px;                   /* Linie mittig unter Dot */
-  top: 0;
-  bottom: 0;
+  left: 16px;
+  top: 6px;
+  bottom: 6px;
   width: 2px;
-  background: rgba(231,166,199,.35); /* rosa Linie */
+  background: rgba(231,166,199,.35);
   border-radius: 2px;
 }
 
 .exp__marker{
   position:absolute;
-  left: 6px;
+  left: 7px;
   top: 6px;
   width: 18px;
   height: 18px;
@@ -486,9 +442,7 @@ p{ margin:0; }
   box-shadow: 0 0 0 4px rgba(231,166,199,.18);
 }
 
-.exp__header{
-  margin-bottom: 10px;
-}
+.exp__header{ margin-bottom: 10px; }
 
 .exp__role{
   margin: 0 0 4px;
@@ -509,11 +463,8 @@ p{ margin:0; }
   font-size: 14px;
 }
 
-.exp__bullets li{
-  margin: 8px 0;
-}
+.exp__bullets li{ margin: 8px 0; }
 
-/* Optional: Hover "alive" (subtil, pink) */
 .exp__item:hover .exp__marker{
   background: #fff;
   box-shadow: 0 0 0 4px rgba(231,166,199,.22), 0 10px 22px rgba(231,166,199,.18);
@@ -521,9 +472,22 @@ p{ margin:0; }
   transition: box-shadow .2s ease, transform .2s ease, background-color .2s ease;
 }
 
-/* Mobile spacing */
+/* Responsive */
+@media (max-width: 980px){
+  .hero__grid{ grid-template-columns:1fr; }
+  .hero__right{ justify-content:flex-start; margin-top:14px; }
+  .hero__title{ font-size:46px; }
+  .hero__bottom{ grid-template-columns:1fr; }
+  .three, .two{ grid-template-columns:1fr; }
+}
+
 @media (max-width: 640px){
-  .exp__item{ padding-left: 30px; }
-  .exp__item::before{ left: 12px; }
-  .exp__marker{ left: 4px; }
+  .nav{ display:none; }
+  .hero{ padding-top:26px; }
+  .hero__title{ font-size:38px; }
+  .avatar{ width:180px; height:180px; }
+
+  .exp__item{ padding-left: 38px; }
+  .exp__item::before{ left: 14px; }
+  .exp__marker{ left: 5px; }
 }
