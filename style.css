@@ -451,3 +451,31 @@ p{ margin: 0; }
     padding: 9px 14px;
   }
 }
+
+/* FORCE: Skills Pills */
+.pillwrap{
+  display:flex !important;
+  flex-wrap:wrap !important;
+  gap:12px !important;
+}
+
+.pillchip{
+  display:inline-flex !important;
+  align-items:center !important;
+  padding:10px 16px !important;
+  border-radius:999px !important;
+  border:1px solid var(--border) !important;
+  background:#fff !important;
+  color:#4b5563 !important;
+  font-size:14px !important;
+  line-height:1 !important;
+  white-space:nowrap !important;
+}
+
+.pillchip:hover{
+  background: var(--accent-bg) !important;
+  border-color: var(--accent) !important;
+  color:#111 !important;
+  box-shadow: 0 6px 16px rgba(231,166,199,.25) !important;
+  transform: translateY(-1px) !important;
+}
