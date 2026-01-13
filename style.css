@@ -1,460 +1,339 @@
-/* style.css */
+<!-- index.html -->
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lena Meier</title>
+  <meta name="description" content="CV / Portfolio – Lena Meier" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-:root{
-  --bg: #faf9f7;
-  --panel: #ffffff;
-  --panel2: #f6f5f3;
-  --border: #e6e3df;
+<body>
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <a class="brand" href="#top">Lena Meier</a>
 
-  --text: #111111;
-  --muted: #6f6f6f;
+      <nav class="nav">
+        <a href="#about">Über mich</a>
+        <a href="#experience">Erfahrung</a>
+        <a href="#projects">Projekte</a>
+        <a href="#skills">Skills</a>
+        <a class="btn btn--small" href="#contact">Kontakt</a>
+      </nav>
+    </div>
+  </header>
 
-  --accent: #e7a6c7;
-  --accent-strong: #d88bb4;
-  --accent-bg: #faedf3;
-  --soft: rgba(231,166,199,.45);
+  <main id="top">
+    <!-- HERO -->
+    <section class="section hero">
+      <div class="container grid hero__grid">
+        <div class="hero__left">
+          <p class="badge">Mediamatik • Branding • Marketing</p>
+          <h1 class="headline">
+            Hi, ich bin <span class="accent">Lena</span>.
+          </h1>
+          <p class="lead">
+            Mediamatikerin in Ausbildung. Ich baue klare Marken, saubere Designs
+            und digitale Inhalte — strukturiert, zuverlässig, professionell.
+          </p>
 
-  --radius: 18px;
-  --max: 1120px;
-}
+          <div class="actions">
+            <a class="btn" href="#projects">Projekte ansehen</a>
+            <a class="btn btn--ghost" href="#contact">Kontakt</a>
+          </div>
 
-*{ box-sizing: border-box; }
-html{ scroll-behavior: smooth; }
+          <div class="meta">
+            <div class="meta__item">
+              <span class="meta__label">Standort</span>
+              <span class="meta__value">Zürich (CH)</span>
+            </div>
+            <div class="meta__item">
+              <span class="meta__label">Fokus</span>
+              <span class="meta__value">Branding, Content, Web</span>
+            </div>
+            <div class="meta__item">
+              <span class="meta__label">Verfügbar</span>
+              <span class="meta__value">ab 2026</span>
+            </div>
+          </div>
+        </div>
 
-body{
-  margin:0;
-  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  background:
-    radial-gradient(600px 400px at 90% -10%, rgba(231,166,199,.18), transparent 60%),
-    radial-gradient(600px 400px at 0% 100%, rgba(231,166,199,.12), transparent 60%),
-    var(--bg);
-  color: var(--text);
-  line-height: 1.55;
-}
+        <div class="hero__right">
+          <div class="card card--big">
+            <div class="card__head">
+              <h2 class="card__title">Kurzprofil</h2>
+              <p class="card__sub">3 Highlights auf einen Blick</p>
+            </div>
 
-/* Links */
-a{
-  color: var(--text);
-  text-decoration: none;
-  transition: color .2s ease, background-color .2s ease, border-color .2s ease, transform .2s ease, box-shadow .2s ease;
-}
-a:hover{ color: var(--accent-strong); }
+            <div class="stack">
+              <div class="mini">
+                <span class="mini__dot"></span>
+                <div>
+                  <p class="mini__title">Saubere Gestaltung</p>
+                  <p class="mini__text">Minimal, modern, mit klarer Typografie & Grid.</p>
+                </div>
+              </div>
 
-/* Layout */
-.container{
-  width: min(var(--max), calc(100% - 40px));
-  margin: 0 auto;
-}
+              <div class="mini">
+                <span class="mini__dot"></span>
+                <div>
+                  <p class="mini__title">Strukturiertes Arbeiten</p>
+                  <p class="mini__text">Planung, Dokumentation, saubere Abgabe.</p>
+                </div>
+              </div>
 
-.section{ padding: 84px 0; }
-.hero{ padding: 110px 0 84px; }
+              <div class="mini">
+                <span class="mini__dot"></span>
+                <div>
+                  <p class="mini__title">Digitaler Fokus</p>
+                  <p class="mini__text">Content, Web, Präsentationen, Social Media.</p>
+                </div>
+              </div>
+            </div>
 
-.section__head{ margin-bottom: 22px; }
-.section__head h2{
-  margin: 0 0 6px;
-  font-size: 26px;
-  letter-spacing: -0.02em;
-}
-.section__head p{
-  margin: 0;
-  color: var(--muted);
-  max-width: 60ch;
-}
+            <div class="divider"></div>
 
-/* ===== Header (prominent & clean) ===== */
-.topbar{
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  backdrop-filter: blur(16px);
-  background: rgba(250,249,247,.92);
-  border-bottom: 1px solid var(--border);
-  box-shadow: 0 10px 28px rgba(0,0,0,.06);
-}
+            <div class="stats">
+              <div class="stat">
+                <p class="stat__num">3+</p>
+                <p class="stat__label">Jahre Ausbildung</p>
+              </div>
+              <div class="stat">
+                <p class="stat__num">10+</p>
+                <p class="stat__label">Projekte</p>
+              </div>
+              <div class="stat">
+                <p class="stat__num">100%</p>
+                <p class="stat__label">Detailfokus</p>
+              </div>
+            </div>
 
-.topbar__inner{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding: 18px 0;
-}
+            <!-- Füllbild (Platzhalter) -->
+            <img
+              class="portrait"
+              src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=80"
+              alt="Portrait Platzhalter"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
 
-/* Brand */
-.brand{
-  font-weight: 800;
-  font-size: 18px;
-  letter-spacing: -0.02em;
-  position: relative;
-}
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2>Über mich</h2>
+          <p>Kurzer Text für Bewerbungen — klar, seriös, ohne Blabla.</p>
+        </div>
 
-.brand::after{
-  content:"";
-  position:absolute;
-  left:0;
-  bottom:-8px;
-  width:34px;
-  height:3px;
-  background: var(--accent);
-  border-radius: 3px;
-}
+        <div class="grid two">
+          <div class="card">
+            <h3>Was ich mache</h3>
+            <p>
+              Ich plane und gestalte digitale Inhalte — von Branding & Layout über
+              Content bis zu einfachen Websites. Ich arbeite gerne strukturiert,
+              sauber dokumentiert und mit einem klaren Qualitätsanspruch.
+            </p>
+          </div>
 
-/* Nav */
-.nav{
-  display:flex;
-  gap: 22px;
-  align-items:center;
-}
+          <div class="card">
+            <h3>Was ich suche</h3>
+            <p>
+              Einstiegsstelle / Praktikum im Bereich Marketing, Branding, Content,
+              Kommunikation oder Digital. Idealerweise hybrid und mit Lernkurve.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-.nav a{
-  color: var(--muted);
-  font-size: 15px;
-  font-weight: 600;
-  position: relative;
-  padding: 6px 0;
-}
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2>Erfahrung</h2>
+          <p>Als Timeline — wirkt „CV-mässig“ und bleibt clean.</p>
+        </div>
 
-/* Hover underline (nur normale Links) */
-.nav a:not(.btn):hover{ color: var(--accent-strong); }
+        <div class="card">
+          <div class="timeline">
+            <div class="tl">
+              <div class="tl__dot"></div>
+              <div class="tl__content">
+                <div class="tl__top">
+                  <h3>Mediamatikerin EFZ (in Ausbildung)</h3>
+                  <span class="pill">2023 – 2026</span>
+                </div>
+                <p class="muted">
+                  Content, Gestaltung, Projektarbeit, Web/Branding-Tasks, Kommunikation.
+                </p>
+              </div>
+            </div>
 
-.nav a:not(.btn)::after{
-  content:"";
-  position:absolute;
-  left:0;
-  bottom:-9px;
-  width:0;
-  height:2px;
-  background: var(--accent);
-  transition: width .25s ease;
-}
-.nav a:not(.btn):hover::after{ width:100%; }
+            <div class="tl">
+              <div class="tl__dot"></div>
+              <div class="tl__content">
+                <div class="tl__top">
+                  <h3>Schul-/Projektarbeiten (BMS/IPA/VA)</h3>
+                  <span class="pill">laufend</span>
+                </div>
+                <p class="muted">
+                  Dokumentation, Analyse, Präsentationen, strukturierte Projektplanung.
+                </p>
+              </div>
+            </div>
 
-/* Kontakt im Header: KEINE Bubble mehr (nur subtiler Hover) */
-.nav .btn{
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-  padding: 8px 12px !important;
-  border-radius: 12px !important;   /* leicht gerundet, nicht pill */
-  color: var(--text) !important;
-  font-weight: 700 !important;
-}
+            <div class="tl">
+              <div class="tl__dot"></div>
+              <div class="tl__content">
+                <div class="tl__top">
+                  <h3>Extras</h3>
+                  <span class="pill">Events • Team</span>
+                </div>
+                <p class="muted">
+                  Organisation, Verantwortung, Zusammenarbeit, Kommunikation.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-.nav .btn:hover{
-  background: var(--accent-bg) !important;
-  color: var(--accent-strong) !important;
-  transform: translateY(-1px);
-}
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2>Projekte</h2>
+          <p>3–6 Cards reichen. Lieber „weniger, aber stark“.</p>
+        </div>
 
-/* falls irgendwo ein underline pseudo-element greifen würde */
-.nav .btn::after{ display:none !important; }
-/* ===== /Header ===== */
+        <div class="grid three">
+          <article class="card project">
+            <div class="project__top">
+              <h3>Portfolio Website</h3>
+              <span class="pill">Web</span>
+            </div>
+            <p class="muted">
+              One-Pager mit sauberem Layout, responsive, GitHub Pages.
+            </p>
+            <div class="tags">
+              <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">UX</span>
+            </div>
+          </article>
 
-.grid{ display:grid; gap: 16px; }
-.hero__grid{ grid-template-columns: 1.15fr .85fr; align-items: start; }
-.two{ grid-template-columns: 1fr 1fr; }
-.three{ grid-template-columns: repeat(3, 1fr); }
+          <article class="card project">
+            <div class="project__top">
+              <h3>Branding Konzept</h3>
+              <span class="pill">Design</span>
+            </div>
+            <p class="muted">
+              Logo, Farben, Typo, Packaging-Ideen & Content-Guidelines.
+            </p>
+            <div class="tags">
+              <span class="tag">Figma</span><span class="tag">Brand</span><span class="tag">Layout</span>
+            </div>
+          </article>
 
-/* Cards */
-.card{
-  border: 1px solid var(--border);
-  background: linear-gradient(180deg, var(--panel), var(--panel2));
-  border-radius: var(--radius);
-  padding: 22px;
-  box-shadow: 0 12px 30px rgba(0,0,0,.06);
-  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
-}
-.card:hover{
-  transform: translateY(-4px);
-  border-color: rgba(231,166,199,.55);
-  box-shadow: 0 18px 40px rgba(231,166,199,.22);
-}
-.card--big{ padding: 24px; }
+          <article class="card project">
+            <div class="project__top">
+              <h3>Präsentations-Set</h3>
+              <span class="pill">Content</span>
+            </div>
+            <p class="muted">
+              Slides im cleanen Grid, klare Hierarchie, Quellen & Storyline.
+            </p>
+            <div class="tags">
+              <span class="tag">Story</span><span class="tag">Design</span><span class="tag">Clarity</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-/* Badge */
-.badge{
-  display:inline-flex;
-  align-items:center;
-  gap: 10px;
-  font-size: 13px;
-  color: var(--muted);
-  padding: 8px 12px;
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  background: rgba(255,255,255,.65);
-  margin: 0 0 14px;
-}
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2>Skills</h2>
+          <p>Eine Auswahl meiner wichtigsten fachlichen und sozialen Kompetenzen.</p>
+        </div>
 
-/* Typo */
-.headline{
-  margin: 0 0 10px;
-  font-size: 52px;
-  letter-spacing: -0.05em;
-  line-height: 1.05;
-}
+        <h3 class="subhead">Hard Skills</h3>
+        <div class="pillwrap">
+          <span class="pillchip">Figma</span>
+          <span class="pillchip">Adobe Creative Cloud</span>
+          <span class="pillchip">InDesign</span>
+          <span class="pillchip">Photoshop</span>
+          <span class="pillchip">Illustrator</span>
+          <span class="pillchip">Canva</span>
+          <span class="pillchip">HTML</span>
+          <span class="pillchip">CSS</span>
+          <span class="pillchip">Content Creation</span>
+          <span class="pillchip">Social Media</span>
+          <span class="pillchip">Branding Basics</span>
+          <span class="pillchip">Präsentationen</span>
+          <span class="pillchip">Microsoft 365</span>
+        </div>
 
-.accent{
-  display:inline-block;
-  border-bottom: 3px solid var(--soft);
-  padding-bottom: 2px;
-}
+        <h3 class="subhead" style="margin-top:26px;">Soft Skills</h3>
+        <div class="pillwrap">
+          <span class="pillchip">Zuverlässigkeit</span>
+          <span class="pillchip">Strukturiertes Arbeiten</span>
+          <span class="pillchip">Teamfähigkeit</span>
+          <span class="pillchip">Kommunikation</span>
+          <span class="pillchip">Organisation</span>
+          <span class="pillchip">Detailgenauigkeit</span>
+          <span class="pillchip">Eigenverantwortung</span>
+          <span class="pillchip">Lernbereitschaft</span>
+          <span class="pillchip">Belastbarkeit</span>
+          <span class="pillchip">Kreatives Denken</span>
+        </div>
+      </div>
+    </section>
 
-.lead{
-  margin: 0 0 18px;
-  color: var(--muted);
-  font-size: 16px;
-  max-width: 56ch;
-}
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2>Kontakt</h2>
+          <p>Mach’s kurz: Mail + LinkedIn + GitHub.</p>
+        </div>
 
-/* Buttons allgemein */
-.actions{
-  display:flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin-bottom: 18px;
-}
+        <div class="grid two">
+          <div class="card">
+            <h3>Schreib mir</h3>
+            <p class="muted">Am besten per E-Mail:</p>
+            <p class="big">
+              <a href="mailto:deine.mail@example.com">deine.mail@example.com</a>
+            </p>
+          </div>
 
-.btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  padding:11px 16px;
-  border-radius:999px;
-  border:1px solid var(--border);
-  background: #fff;
-  color: var(--text);
-  font-weight:600;
-  font-size:14px;
-  transition: transform .2s ease, background-color .2s ease, border-color .2s ease, box-shadow .2s ease, color .2s ease;
-}
-.btn:hover{
-  background: var(--accent-bg);
-  border-color: rgba(231,166,199,.75);
-  box-shadow: 0 10px 22px rgba(231,166,199,.22);
-  transform: translateY(-1px);
-  color: #000;
-}
-.btn--ghost{ background: transparent; }
+          <div class="card">
+            <h3>Links</h3>
+            <ul class="links">
+              <li><a href="https://github.com/lena-2912" target="_blank" rel="noreferrer">GitHub</a></li>
+              <li><a href="#" target="_blank" rel="noreferrer">LinkedIn</a></li>
+              <li><a href="#" target="_blank" rel="noreferrer">CV (PDF)</a></li>
+            </ul>
+          </div>
+        </div>
 
-/* Meta */
-.meta{
-  display:grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
-}
-.meta__item{
-  padding: 12px;
-  border-radius: 14px;
-  border: 1px solid var(--border);
-  background: rgba(255,255,255,.65);
-}
-.meta__label{
-  display:block;
-  color: var(--muted);
-  font-size: 12px;
-  margin-bottom: 2px;
-}
-.meta__value{
-  font-size: 14px;
-  font-weight: 700;
-}
+        <footer class="footer">
+          <p>© <span id="year"></span> Lena Meier • Built on GitHub Pages</p>
+        </footer>
+      </div>
+    </section>
+  </main>
 
-/* Card headings */
-.card__head{ margin-bottom: 10px; }
-.card__title{ margin:0; font-size: 18px; letter-spacing: -0.02em; }
-.card__sub{ margin:4px 0 0; color: var(--muted); font-size: 13px; }
-
-/* Mini stack */
-.stack{ display:grid; gap: 12px; margin-top: 14px; }
-.mini{ display:flex; gap: 12px; align-items:flex-start; }
-.mini__dot{
-  width: 10px; height: 10px;
-  border-radius: 999px;
-  border: 1px solid rgba(231,166,199,.55);
-  background: rgba(231,166,199,.35);
-  margin-top: 6px;
-}
-.mini__title{ margin:0; font-weight: 700; }
-.mini__text{ margin:4px 0 0; color: var(--muted); font-size: 13px; }
-
-/* Divider */
-.divider{
-  height: 1px;
-  background: var(--border);
-  margin: 18px 0;
-}
-
-/* Stats */
-.stats{
-  display:grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-}
-.stat{
-  padding: 12px;
-  border-radius: 14px;
-  border: 1px solid var(--border);
-  background: rgba(255,255,255,.65);
-}
-.stat__num{
-  margin:0;
-  font-size: 18px;
-  font-weight: 800;
-  letter-spacing: -0.02em;
-}
-.stat__label{
-  margin: 4px 0 0;
-  color: var(--muted);
-  font-size: 12px;
-}
-
-/* Base text */
-h3{ margin: 0 0 10px; letter-spacing: -0.02em; }
-p{ margin: 0; }
-.muted{ color: var(--muted); }
-
-/* Timeline */
-.timeline{ display:grid; gap: 16px; }
-.tl{
-  display:grid;
-  grid-template-columns: 16px 1fr;
-  gap: 14px;
-}
-.tl__dot{
-  width: 12px; height: 12px;
-  border-radius: 999px;
-  background: rgba(231,166,199,.35);
-  border: 1px solid rgba(231,166,199,.55);
-  margin-top: 6px;
-}
-.tl__top{
-  display:flex;
-  gap: 10px;
-  align-items:center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-.pill{
-  font-size: 12px;
-  color: var(--muted);
-  padding: 6px 10px;
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  background: rgba(255,255,255,.65);
-}
-
-/* Project tags */
-.project .tags{ margin-top: 12px; display:flex; gap: 8px; flex-wrap: wrap; }
-.tag{
-  font-size: 12px;
-  color: var(--muted);
-  padding: 6px 10px;
-  border-radius: 999px;
-  border: 1px solid var(--border);
-  background: rgba(255,255,255,.65);
-}
-
-/* Contact links */
-.links{
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display:grid;
-  gap: 10px;
-}
-.links a{
-  display:flex;
-  justify-content: space-between;
-  align-items:center;
-  padding: 12px;
-  border-radius: 14px;
-  border: 1px solid var(--border);
-  background: rgba(255,255,255,.65);
-  color: var(--text);
-  transition: background-color .2s ease, border-color .2s ease, transform .2s ease, box-shadow .2s ease, color .2s ease;
-}
-.links a:hover{
-  background: var(--accent-bg);
-  border-color: rgba(231,166,199,.75);
-  box-shadow: 0 10px 18px rgba(231,166,199,.18);
-  transform: translateY(-1px);
-  color: #000;
-}
-
-.big{ font-size: 18px; font-weight: 800; letter-spacing: -0.02em; }
-
-.footer{
-  margin-top: 22px;
-  color: var(--muted);
-  font-size: 12px;
-  text-align:center;
-}
-
-/* ===== Skills Pills ===== */
-.subhead{
-  margin: 22px 0 14px;
-  font-size: 22px;
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  color: var(--text);
-}
-.pillwrap{
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-.pillchip{
-  display: inline-flex;
-  align-items: center;
-  padding: 10px 16px;
-  border-radius: 999px;
-  border: 1px solid var(--border);
-  background: #ffffff;
-  color: #4b5563;
-  font-size: 14px;
-  line-height: 1;
-  white-space: nowrap;
-  transition:
-    background-color .25s ease,
-    border-color .25s ease,
-    color .25s ease,
-    transform .2s ease,
-    box-shadow .25s ease;
-}
-.pillchip:hover{
-  background: var(--accent-bg);
-  border-color: var(--accent);
-  color: #111;
-  transform: translateY(-1px);
-  box-shadow: 0 6px 16px rgba(231,166,199,.25);
-}
-
-/* ===== Portrait (Füllbild) ===== */
-.portrait{
-  width: 100%;
-  height: 260px;
-  margin-top: 14px;
-  border-radius: 16px;
-  border: 1px solid var(--border);
-  object-fit: cover;
-  background: #fff;
-  box-shadow: 0 12px 26px rgba(0,0,0,.06);
-}
-
-/* Responsive */
-@media (max-width: 980px){
-  .hero__grid{ grid-template-columns: 1fr; }
-  .three{ grid-template-columns: 1fr; }
-  .two{ grid-template-columns: 1fr; }
-  .headline{ font-size: 44px; }
-}
-
-@media (max-width: 640px){
-  .nav{ display:none; }
-  .section{ padding: 70px 0; }
-  .hero{ padding: 88px 0 70px; }
-  .headline{ font-size: 38px; }
-  .meta{ grid-template-columns: 1fr; }
-  .stats{ grid-template-columns: 1fr; }
-  .pillchip{ font-size: 13px; padding: 9px 14px; }
-  .portrait{ height: 220px; }
-}
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
