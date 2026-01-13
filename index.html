@@ -1,18 +1,20 @@
-<!-- index.html -->
 <!doctype html>
 <html lang="de">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Lena Meier</title>
-  <meta name="description" content="CV / Portfolio – Lena Meier" />
+  <meta name="description" content="Portfolio / Profil – Lena Meier (Content & Kommunikation)" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
+  <!-- HEADER -->
   <header class="topbar">
     <div class="container topbar__inner">
       <a class="brand" href="#top">Lena Meier</a>
@@ -22,105 +24,84 @@
         <a href="#experience">Erfahrung</a>
         <a href="#projects">Projekte</a>
         <a href="#skills">Skills</a>
-        <a class="btn btn--small" href="#contact">Kontakt</a>
+        <a class="nav__cta" href="#contact">Kontakt</a>
       </nav>
     </div>
   </header>
 
   <main id="top">
-    <!-- HERO -->
-    <section class="section hero">
-      <div class="container grid hero__grid">
+    <!-- HERO (wie Screenshot) -->
+    <section class="hero">
+      <div class="container hero__grid">
+        <!-- LEFT -->
         <div class="hero__left">
-          <p class="badge">Mediamatik • Branding • Marketing</p>
-          <h1 class="headline">
-            Hi, ich bin <span class="accent">Lena</span>.
+          <p class="hero__kicker">Let me introduce myself</p>
+
+          <h1 class="hero__title">
+            Hi, ich bin <span class="hl">Lena</span> – Mediamatikerin in Ausbildung
+            mit Fokus auf <span class="hl">Content & Kommunikation</span>
           </h1>
-          <p class="lead">
-            Mediamatikerin in Ausbildung. Ich baue klare Marken, saubere Designs
-            und digitale Inhalte — strukturiert, zuverlässig, professionell.
+
+          <p class="hero__text">
+            Ich erstelle klare Inhalte und unterstütze Teams bei Kommunikation, Struktur und Umsetzung —
+            von Social Media über Präsentationen bis zu Web-Content. Dabei arbeite ich
+            zuverlässig, sauber dokumentiert und mit Blick fürs Detail.
           </p>
 
-          <div class="actions">
-            <a class="btn" href="#projects">Projekte ansehen</a>
-            <a class="btn btn--ghost" href="#contact">Kontakt</a>
-          </div>
-
-          <div class="meta">
-            <div class="meta__item">
-              <span class="meta__label">Standort</span>
-              <span class="meta__value">Zürich (CH)</span>
-            </div>
-            <div class="meta__item">
-              <span class="meta__label">Fokus</span>
-              <span class="meta__value">Branding, Content, Web</span>
-            </div>
-            <div class="meta__item">
-              <span class="meta__label">Verfügbar</span>
-              <span class="meta__value">ab 2026</span>
-            </div>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#contact">Kontakt</a>
+            <a class="btn btn--ghost" href="#">CV (PDF)</a>
+            <a class="btn btn--ghost" href="#projects">Projekte</a>
           </div>
         </div>
 
+        <!-- RIGHT (Portrait) -->
         <div class="hero__right">
-          <div class="card card--big">
-            <div class="card__head">
-              <h2 class="card__title">Kurzprofil</h2>
-              <p class="card__sub">3 Highlights auf einen Blick</p>
-            </div>
-
-            <div class="stack">
-              <div class="mini">
-                <span class="mini__dot"></span>
-                <div>
-                  <p class="mini__title">Saubere Gestaltung</p>
-                  <p class="mini__text">Minimal, modern, mit klarer Typografie & Grid.</p>
-                </div>
-              </div>
-
-              <div class="mini">
-                <span class="mini__dot"></span>
-                <div>
-                  <p class="mini__title">Strukturiertes Arbeiten</p>
-                  <p class="mini__text">Planung, Dokumentation, saubere Abgabe.</p>
-                </div>
-              </div>
-
-              <div class="mini">
-                <span class="mini__dot"></span>
-                <div>
-                  <p class="mini__title">Digitaler Fokus</p>
-                  <p class="mini__text">Content, Web, Präsentationen, Social Media.</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="divider"></div>
-
-            <div class="stats">
-              <div class="stat">
-                <p class="stat__num">3+</p>
-                <p class="stat__label">Jahre Ausbildung</p>
-              </div>
-              <div class="stat">
-                <p class="stat__num">10+</p>
-                <p class="stat__label">Projekte</p>
-              </div>
-              <div class="stat">
-                <p class="stat__num">100%</p>
-                <p class="stat__label">Detailfokus</p>
-              </div>
-            </div>
-
-            <!-- Füllbild (Platzhalter) -->
+          <div class="avatar">
+            <!-- Platzhalterbild: später ersetzen durch eigenes Foto -->
             <img
-              class="portrait"
-              src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=80"
+              src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80"
               alt="Portrait Platzhalter"
               loading="lazy"
             />
           </div>
         </div>
+      </div>
+
+      <!-- Unterer Bereich wie Screenshot -->
+      <div class="container hero__bottom">
+        <section class="panel">
+          <h2 class="panel__title">Profil</h2>
+
+          <p class="panel__text">
+            Mein Schwerpunkt liegt auf verständlichen Texten, konsistenter Kommunikation und sauberer Gestaltung.
+            Ich plane Inhalte, setze sie um und bringe Struktur rein — damit Botschaften klar ankommen.
+          </p>
+
+          <p class="panel__meta">
+            <strong>Standort:</strong> Zürich (CH) &nbsp;•&nbsp;
+            <strong>Arbeitsmodell:</strong> Hybrid möglich &nbsp;•&nbsp;
+            <strong>Verfügbar:</strong> ab 2026
+          </p>
+
+          <div class="tags">
+            <span class="tag">#Kommunikation</span>
+            <span class="tag">#Content</span>
+            <span class="tag">#Detailorientiert</span>
+          </div>
+        </section>
+
+        <aside class="panel panel--box">
+          <h2 class="panel__title">Summary of skills</h2>
+          <ul class="bullets">
+            <li>Content Creation (Text, Visuals, Social Media)</li>
+            <li>Präsentationen: Storyline, Struktur, sauberes Layout</li>
+            <li>Branding Basics: konsistenter Look & Tone of Voice</li>
+            <li>Web-Content (HTML/CSS Basics)</li>
+            <li>Organisation & Projektarbeit (Planung, Doku, Abgabe)</li>
+            <li>Microsoft 365 (Advanced)</li>
+          </ul>
+        </aside>
       </div>
     </section>
 
@@ -129,24 +110,23 @@
       <div class="container">
         <div class="section__head">
           <h2>Über mich</h2>
-          <p>Kurzer Text für Bewerbungen — klar, seriös, ohne Blabla.</p>
+          <p>Kurzer Text für Bewerbungen — klar und seriös.</p>
         </div>
 
         <div class="grid two">
           <div class="card">
             <h3>Was ich mache</h3>
             <p>
-              Ich plane und gestalte digitale Inhalte — von Branding & Layout über
-              Content bis zu einfachen Websites. Ich arbeite gerne strukturiert,
-              sauber dokumentiert und mit einem klaren Qualitätsanspruch.
+              Ich unterstütze bei Content & Kommunikation: Texte, Social Media, Präsentationen und Layouts.
+              Ich arbeite strukturiert, schnell lernend und mit hohem Qualitätsanspruch.
             </p>
           </div>
 
           <div class="card">
             <h3>Was ich suche</h3>
             <p>
-              Einstiegsstelle / Praktikum im Bereich Marketing, Branding, Content,
-              Kommunikation oder Digital. Idealerweise hybrid und mit Lernkurve.
+              Einstiegsstelle / Praktikum im Bereich Content, Kommunikation, Marketing oder Digital
+              (idealerweise hybrid) – mit Lernkurve und Verantwortung.
             </p>
           </div>
         </div>
@@ -158,46 +138,46 @@
       <div class="container">
         <div class="section__head">
           <h2>Erfahrung</h2>
-          <p>Als Timeline — wirkt „CV-mässig“ und bleibt clean.</p>
+          <p>Als Timeline – clean und „CV-mässig“.</p>
         </div>
 
         <div class="card">
           <div class="timeline">
             <div class="tl">
               <div class="tl__dot"></div>
-              <div class="tl__content">
+              <div>
                 <div class="tl__top">
                   <h3>Mediamatikerin EFZ (in Ausbildung)</h3>
                   <span class="pill">2023 – 2026</span>
                 </div>
                 <p class="muted">
-                  Content, Gestaltung, Projektarbeit, Web/Branding-Tasks, Kommunikation.
+                  Content-Erstellung, Gestaltung, Präsentationen, interne Kommunikation, Projektarbeit.
                 </p>
               </div>
             </div>
 
             <div class="tl">
               <div class="tl__dot"></div>
-              <div class="tl__content">
+              <div>
                 <div class="tl__top">
                   <h3>Schul-/Projektarbeiten (BMS/IPA/VA)</h3>
                   <span class="pill">laufend</span>
                 </div>
                 <p class="muted">
-                  Dokumentation, Analyse, Präsentationen, strukturierte Projektplanung.
+                  Strukturierte Dokumentation, Analyse, Umsetzung, Abgabequalität.
                 </p>
               </div>
             </div>
 
             <div class="tl">
               <div class="tl__dot"></div>
-              <div class="tl__content">
+              <div>
                 <div class="tl__top">
                   <h3>Extras</h3>
-                  <span class="pill">Events • Team</span>
+                  <span class="pill">Team • Organisation</span>
                 </div>
                 <p class="muted">
-                  Organisation, Verantwortung, Zusammenarbeit, Kommunikation.
+                  Verantwortung, Planung, Zusammenarbeit, Kommunikation.
                 </p>
               </div>
             </div>
@@ -211,33 +191,29 @@
       <div class="container">
         <div class="section__head">
           <h2>Projekte</h2>
-          <p>3–6 Cards reichen. Lieber „weniger, aber stark“.</p>
+          <p>Weniger, aber stark. 3–6 Cards reichen völlig.</p>
         </div>
 
         <div class="grid three">
           <article class="card project">
             <div class="project__top">
-              <h3>Portfolio Website</h3>
+              <h3>Onepager Portfolio</h3>
               <span class="pill">Web</span>
             </div>
-            <p class="muted">
-              One-Pager mit sauberem Layout, responsive, GitHub Pages.
-            </p>
+            <p class="muted">Cleanes Layout, responsive, GitHub Pages.</p>
             <div class="tags">
-              <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">UX</span>
+              <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Content</span>
             </div>
           </article>
 
           <article class="card project">
             <div class="project__top">
-              <h3>Branding Konzept</h3>
-              <span class="pill">Design</span>
+              <h3>Content-Konzept</h3>
+              <span class="pill">Kommunikation</span>
             </div>
-            <p class="muted">
-              Logo, Farben, Typo, Packaging-Ideen & Content-Guidelines.
-            </p>
+            <p class="muted">Content-Plan, Tonalität, Posting-Struktur, Beispiele.</p>
             <div class="tags">
-              <span class="tag">Figma</span><span class="tag">Brand</span><span class="tag">Layout</span>
+              <span class="tag">Social</span><span class="tag">Copy</span><span class="tag">Planung</span>
             </div>
           </article>
 
@@ -246,11 +222,9 @@
               <h3>Präsentations-Set</h3>
               <span class="pill">Content</span>
             </div>
-            <p class="muted">
-              Slides im cleanen Grid, klare Hierarchie, Quellen & Storyline.
-            </p>
+            <p class="muted">Storyline, klare Folien, saubere Typo & Struktur.</p>
             <div class="tags">
-              <span class="tag">Story</span><span class="tag">Design</span><span class="tag">Clarity</span>
+              <span class="tag">Slides</span><span class="tag">Design</span><span class="tag">Clarity</span>
             </div>
           </article>
         </div>
@@ -267,33 +241,28 @@
 
         <h3 class="subhead">Hard Skills</h3>
         <div class="pillwrap">
+          <span class="pillchip">Content Creation</span>
+          <span class="pillchip">Social Media</span>
+          <span class="pillchip">Präsentationen</span>
           <span class="pillchip">Figma</span>
-          <span class="pillchip">Adobe Creative Cloud</span>
+          <span class="pillchip">Adobe CC</span>
           <span class="pillchip">InDesign</span>
-          <span class="pillchip">Photoshop</span>
-          <span class="pillchip">Illustrator</span>
           <span class="pillchip">Canva</span>
           <span class="pillchip">HTML</span>
           <span class="pillchip">CSS</span>
-          <span class="pillchip">Content Creation</span>
-          <span class="pillchip">Social Media</span>
-          <span class="pillchip">Branding Basics</span>
-          <span class="pillchip">Präsentationen</span>
           <span class="pillchip">Microsoft 365</span>
         </div>
 
         <h3 class="subhead" style="margin-top:26px;">Soft Skills</h3>
         <div class="pillwrap">
-          <span class="pillchip">Zuverlässigkeit</span>
-          <span class="pillchip">Strukturiertes Arbeiten</span>
-          <span class="pillchip">Teamfähigkeit</span>
           <span class="pillchip">Kommunikation</span>
+          <span class="pillchip">Teamfähigkeit</span>
+          <span class="pillchip">Strukturiert</span>
+          <span class="pillchip">Zuverlässig</span>
+          <span class="pillchip">Detailorientiert</span>
+          <span class="pillchip">Lernbereit</span>
           <span class="pillchip">Organisation</span>
-          <span class="pillchip">Detailgenauigkeit</span>
           <span class="pillchip">Eigenverantwortung</span>
-          <span class="pillchip">Lernbereitschaft</span>
-          <span class="pillchip">Belastbarkeit</span>
-          <span class="pillchip">Kreatives Denken</span>
         </div>
       </div>
     </section>
@@ -303,16 +272,14 @@
       <div class="container">
         <div class="section__head">
           <h2>Kontakt</h2>
-          <p>Mach’s kurz: Mail + LinkedIn + GitHub.</p>
+          <p>Mail + Links – kurz und professionell.</p>
         </div>
 
         <div class="grid two">
           <div class="card">
             <h3>Schreib mir</h3>
             <p class="muted">Am besten per E-Mail:</p>
-            <p class="big">
-              <a href="mailto:deine.mail@example.com">deine.mail@example.com</a>
-            </p>
+            <p class="big"><a href="mailto:deine.mail@example.com">deine.mail@example.com</a></p>
           </div>
 
           <div class="card">
