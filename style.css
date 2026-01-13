@@ -67,8 +67,8 @@ a:hover{
   position: sticky;
   top: 0;
   z-index: 50;
-  backdrop-filter: blur(12px);
-  background: rgba(250, 249, 247, .80);
+  backdrop-filter: blur(14px);
+  background: rgba(250,249,247,.88);
   border-bottom: 1px solid var(--border);
 }
 
@@ -76,24 +76,65 @@ a:hover{
   display:flex;
   align-items:center;
   justify-content:space-between;
-  padding: 14px 0;
+  padding: 18px 0; /* mehr Höhe = mehr Präsenz */
 }
 
+/* Logo / Titel links */
 .brand{
-  font-weight: 700;
+  font-weight: 800;
+  font-size: 18px;
   letter-spacing: -0.02em;
+  position: relative;
 }
 
+/* feine rosa Linie unter "Profil" */
+.brand::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-6px;
+  width:28px;
+  height:2px;
+  background: var(--accent);
+  border-radius: 2px;
+}
+
+/* Navigation */
 .nav{
   display:flex;
-  gap: 14px;
+  gap: 22px; /* mehr Luft */
   align-items:center;
 }
 
 .nav a{
   color: var(--muted);
-  font-size: 14px;
+  font-size: 15px;
+  font-weight: 500;
+  position: relative;
+  padding: 4px 0;
 }
+
+/* dezenter Hover */
+.nav a:hover{
+  color: var(--text);
+}
+
+/* feine Hover-Linie unter Nav-Punkten */
+.nav a:not(.btn)::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-6px;
+  width:0;
+  height:2px;
+  background: var(--accent);
+  transition: width .25s ease;
+}
+
+.nav a:not(.btn):hover::after{
+  width:100%;
+}
+
 
 /* Nav Hover rosa */
 .nav a:hover{
