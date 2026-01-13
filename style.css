@@ -1,16 +1,19 @@
 :root{
-  --bg: #0b0b0c;
-  --panel: rgba(255,255,255,.06);
-  --panel2: rgba(255,255,255,.04);
-  --border: rgba(255,255,255,.10);
-  --text: rgba(255,255,255,.92);
-  --muted: rgba(255,255,255,.68);
-  --soft: rgba(255,255,255,.18);
+  --bg: #faf9f7;              /* warmes Off-White */
+  --panel: #ffffff;
+  --panel2: #f6f5f3;
+  --border: #e6e3df;
+
+  --text: #111111;
+  --muted: #6f6f6f;
+
+  --accent: #e7a6c7;          /* softes Rosa */
+  --accent-strong: #d88bb4;   /* für Hover */
+  --accent-bg: #faedf3;       /* sehr leichtes Rosa */
 
   --radius: 18px;
   --max: 1120px;
 }
-
 *{ box-sizing: border-box; }
 html{ scroll-behavior: smooth; }
 body{
